@@ -311,7 +311,7 @@ async function init(){
     drawLand(land,rivers,lakes,geography,overview);initOTGeography(otGazetteerData,otTerrainData,otWaterData);bindControls();selectEvent(initial.id,true,initialYear);
     if(!requested&&params.has(isOT()?'node':'year')&&requestedYear>=minYear&&requestedYear<=maxYear)browseYear(initialYear);
     initPhilosophyGuide(guideData);initPhilosophyAtlas(philosophyData,params);
-    if(requestedReading&&typeof restoreReadingLink==='function')restoreReadingLink(requestedReading,params.get('readArea'));else if(isPhilosophyView()&&philosophyView==='guide'&&guidePersonNode(params.get('phGuide')))openGuidePerson(params.get('phGuide'),true,{id:params.get('phGuide'),tab:validGuideTab(params.get('phGuideTab'))?params.get('phGuideTab'):'profile',scroll:0,details:[]});
+    if(requestedReading&&typeof restoreReadingLink==='function')restoreReadingLink(requestedReading,params.get('readArea'));else if(isPhilosophyView()&&['guide','overview'].includes(philosophyView)&&guidePersonNode(params.get('phGuide')))openGuidePerson(params.get('phGuide'),true,{id:params.get('phGuide'),tab:validGuideTab(params.get('phGuideTab'))?params.get('phGuideTab'):'profile',scroll:0,details:[]});
   }catch(error){$('#load-error').hidden=false;$('#load-error').textContent=`地图未能载入：${error.message}。请在项目目录运行 python3 scripts/serve.py，然后访问 http://127.0.0.1:8001。`;console.error(error);}
 }
 init();

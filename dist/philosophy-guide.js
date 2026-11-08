@@ -6,7 +6,7 @@ let guideTimelineReturn=null;
 function guidePersonNode(id){return philosophyAtlasData.nodes.find(n=>n.kind==='person'&&n.personId===id);}
 function guideGroupsFor(id){return philosophyGuideData.groups.filter(g=>g.personIds.includes(id)||g.alsoPersonIds.includes(id));}
 function guidePersonImage(id){return philosophyGalleryData.find(i=>i.id.startsWith('portrait-')&&i.personIds.includes(id))||(id==='plato'?cultureImage('plato-bust'):null);}
-function guideOpenTimeline(id){if(!philosophyNode(id))return;guideTimelineReturn={person:$('#philosophy-person-dialog').open?captureGuidePerson():null,history:guidePersonHistory.slice(),query:$('#philosophy-guide-search').value,scroll:$('#philosophy-guide-content').scrollTop};philosophyState.kind='all';philosophyState.query='';philosophyState.zoom=true;$('#philosophy-person-dialog').close();setPhilosophyView('timeline',false);selectPhilosophyNode(id);}
+function guideOpenTimeline(id){if(!philosophyNode(id))return;guideTimelineReturn={opener:$('#philosophy-person-dialog').open?guideDialogOpener:document.activeElement,view:philosophyView,overview:philosophyView==='overview'?captureOverviewReading():null,person:$('#philosophy-person-dialog').open?captureGuidePerson():null,history:guidePersonHistory.slice(),query:$('#philosophy-guide-search').value,scroll:$('#philosophy-guide-content').scrollTop};philosophyState.kind='all';philosophyState.query='';philosophyState.zoom=true;$('#philosophy-person-dialog').close();setPhilosophyView('timeline',false);selectPhilosophyNode(id);}
 function guidePortrait(node){const image=guidePersonImage(node.personId);if(image){const img=document.createElement('img');img.src=image.image;img.alt='';img.loading='lazy';return img;}const mark=historyEl('span',overviewTitle(node).split('·').at(-1).slice(0,1),'guide-person-mark');mark.setAttribute('aria-hidden','true');return mark;}
 function guideCard(node){
  const card=libraryButton('',()=>openGuidePerson(node.personId),'guide-person-card');card.dataset.guidePerson=node.personId;
@@ -42,7 +42,7 @@ function guideBrowseYear(year,locate=true){guideInteract();
  $('#philosophy-guide-year-status').textContent='';browsePhilosophyYear(year);if(locate)scrollGuidePhase(philosophyPhase().id);
 }
 function guideReadFull(node){
- const dialog=$('#philosophy-person-dialog'),snapshot=captureGuidePerson();dialog.close();philosophyReadRef(node.readRef);$('#comparison-reader-dialog').addEventListener('close',()=>{if(isPhilosophyView()&&philosophyView==='guide'&&!dialog.open){dialog.showModal();restoreGuideSnapshot(snapshot);syncPhilosophyURL();}},{once:true});
+ const dialog=$('#philosophy-person-dialog'),snapshot=captureGuidePerson(),origin=philosophyView;dialog.close();philosophyReadRef(node.readRef);$('#comparison-reader-dialog').addEventListener('close',()=>{if(isPhilosophyView()&&philosophyView===origin&&!dialog.open){dialog.showModal();restoreGuideSnapshot(snapshot);syncPhilosophyURL();}},{once:true});
 }
 function openGuidePerson(id,push=true,snapshot=null){
  const node=guidePersonNode(id);if(!node)return;const dialog=$('#philosophy-person-dialog');if(push&&dialog.open&&guidePersonId!==id)guidePersonHistory.push(captureGuidePerson());else if(!dialog.open){guidePersonHistory=[];guideDialogOpener=document.activeElement;}
@@ -56,7 +56,7 @@ function renderGuidePerson(){
  const tabs=historyEl('div',null,'guide-person-tabs');tabs.setAttribute('role','group');tabs.setAttribute('aria-label','人物阅读内容');for(const [id,text] of [['profile','人物概览'],['works','相关著作'],['relations','思想联系']]){const b=libraryButton(text,()=>switchGuidePersonTab(id));b.dataset.guidePersonTab=id;b.setAttribute('aria-pressed',String(guidePersonTab===id));tabs.append(b);}root.append(guideSeriesNavigation(node.personId),tabs);
  const body=historyEl('div',null,'guide-person-body');
  if(guidePersonTab==='profile'){
-  body.append(historyEl('p',node.summary,'guide-profile-summary'));for(const section of node.sections)if(section.text!==node.summary)body.append(historyEl('h3',section.title),historyEl('p',section.text));body.append(readerSources(node));
+  body.append(historyEl('p',node.summary,'guide-profile-summary'));for(const section of node.sections)if(section.text!==node.summary)body.append(historyEl('h3',section.title),historyEl('p',section.text));body.append(readerSources(node));const context=guidePersonContext(node);if(context)body.append(context);
  }else if(guidePersonTab==='works'){
   body.append(historyEl('p','相关文本可能涉及作者、整理者或对话人物等角色，具体归属列在各条中。','guide-reading-note'));const works=philosophyConnectionWorks(node.personId);if(!works.length)body.append(historyEl('p','当前编选尚无该人物的单列作品，可从完整资料继续查阅。'));
   for(const work of works){const card=historyEl('article',null,'guide-work-card');card.dataset.guideWork=work.id;card.append(historyEl('h3',work.title),historyEl('small',work.dateLabel));const original=work.readRef&&cultureEntity(work.readRef.id);if(original?.attribution)card.append(historyEl('p',original.attribution,'guide-reading-note'));card.append(historyEl('p',work.summary));if(work.imageId)card.append(cultureFigure(work.imageId));else if(work.readRef)card.append(philosophyGallery(philosophyGalleryData.filter(i=>i.workIds.includes(work.readRef.id)).map(i=>i.id)));card.append(libraryButton('进入此书的时间轴详读 →',()=>guideOpenTimeline(work.id)),readerSources(work));body.append(card);}
@@ -65,7 +65,7 @@ function renderGuidePerson(){
 }
 function renderGuideLocalRelations(root,node){
  const relations=philosophyConnectionsRelations().filter(r=>r.fromId===node.personId||r.toId===node.personId);root.append(historyEl('p','只呈现当前人物的直接联系；箭头沿条目的起点至回应者阅读。共同问题比较用无箭头虚线，具体关系及核验状态见下方。','guide-reading-note'));
- if(!relations.length){root.append(historyEl('p','当前编选尚无已核查出处的直接关系；可从人物资料与原始笔记继续研究。'));return;}
+ if(!relations.length){root.append(historyEl('p','当前编选尚无已核查出处的直接关系；可从人物资料与所列研究来源继续阅读。'));return;}
  const graph=historyEl('details',null,'guide-local-graph');graph.append(historyEl('summary','展开人物局部关系图'));const frame=historyEl('div',null,'guide-local-graph-scroll');frame.tabIndex=0;frame.setAttribute('role','region');frame.setAttribute('aria-label','局部人物关系图，可单独横向滚动');const height=Math.max(180,relations.length*88+35),svg=svgNode('svg',{width:660,height,viewBox:`0 0 660 ${height}`,role:'group','aria-label':node.title+'的直接思想联系'}),defs=svgNode('defs'),marker=svgNode('marker',{id:'guide-relation-arrow',viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:6,markerHeight:6,orient:'auto'});marker.append(svgNode('path',{d:'M0 0 L10 5 L0 10z',fill:'#95704b'}));defs.append(marker);svg.append(defs);const cy=height/2;
  svg.append(svgNode('rect',{x:10,y:cy-26,width:175,height:52,rx:5,class:'guide-graph-node'}),svgNode('text',{x:22,y:cy+5,class:'guide-graph-name'},overviewTitle(node)));
  relations.forEach((relation,index)=>{
@@ -119,8 +119,16 @@ function guideSeriesNavigation(id){
  const next=libraryButton(position.next?guidePersonNode(position.next).title+' →':'已是本系列末位',()=>openGuidePerson(position.next),'guide-series-next');next.disabled=!position.next;next.dataset.guideSeriesStep='next';nav.append(previous,label,next);return nav;
 }
 
-function renderGuideTimelineReturn(){const button=$('#philosophy-return-reading');button.hidden=philosophyView!=='timeline'||!guideTimelineReturn;if(!button.hidden)button.textContent=guideTimelineReturn.person?'返回刚才人物':'返回刚才搜索';}
+function renderGuideTimelineReturn(){const button=$('#philosophy-return-reading');button.hidden=philosophyView!=='timeline'||!guideTimelineReturn;if(!button.hidden)button.textContent=guideTimelineReturn.person?'返回刚才人物':guideTimelineReturn.view==='overview'?'返回刚才结构图':'返回刚才搜索';}
 function returnGuideTimelineReading(){
- const target=guideTimelineReturn;if(!target)return;guideTimelineReturn=null;setPhilosophyView('guide');const root=$('#philosophy-guide-content');if($('#philosophy-guide-search').value!==target.query){$('#philosophy-guide-search').value=target.query;renderPhilosophyGuide();}root.scrollTop=target.scroll;trackGuideReadingEra();
- if(validGuideSnapshot(target.person)){openGuidePerson(target.person.id,false,target.person);guidePersonHistory=target.history.filter(validGuideSnapshot);$('#philosophy-person-back').hidden=!guidePersonHistory.length;}else saveGuideReading();
+ const target=guideTimelineReturn;if(!target)return;guideTimelineReturn=null;setPhilosophyView(target.view==='overview'?'overview':'guide');if(target.view==='overview')restoreOverviewReading(target.overview);const root=$('#philosophy-guide-content');if($('#philosophy-guide-search').value!==target.query){$('#philosophy-guide-search').value=target.query;renderPhilosophyGuide();}root.scrollTop=target.scroll;trackGuideReadingEra();
+ if(validGuideSnapshot(target.person)){openGuidePerson(target.person.id,false,target.person);guidePersonHistory=target.history.filter(validGuideSnapshot);if(target.opener?.isConnected)guideDialogOpener=target.opener;$('#philosophy-person-back').hidden=!guidePersonHistory.length;}else{saveGuideReading();requestAnimationFrame(()=>target.opener?.isConnected&&target.opener.focus({preventScroll:true}));}
+}
+
+function guideContextEvents(node){
+ return philosophyAtlasData.nodes.filter(n=>n.kind==='event'&&n.anchor>=node.range[0]&&n.anchor<=node.range[1]).sort((a,b)=>Math.abs(a.anchor-node.anchor)-Math.abs(b.anchor-node.anchor)||a.anchor-b.anchor||a.id.localeCompare(b.id)).slice(0,4).sort((a,b)=>a.anchor-b.anchor||a.id.localeCompare(b.id));
+}
+function guidePersonContext(node){
+ const events=guideContextEvents(node);if(!events.length)return null;const fold=historyEl('details',null,'guide-person-context');fold.append(historyEl('summary','放回时代：纪事与传播 · '+events.length+' 条'),historyEl('p','按人物所列日期范围，选取靠近代表活动年的既有纪事。这些年代背景不表示人物亲历，也不单凭同时发生推断直接影响。','guide-reading-note'));
+ const list=historyEl('div',null,'guide-context-list');for(const event of events){const button=libraryButton('',()=>guideOpenTimeline(event.id));button.dataset.guideContext=event.id;button.append(historyEl('small',philosophyDate(event.anchor)),historyEl('strong',event.title));list.append(button);}fold.append(list);return fold;
 }

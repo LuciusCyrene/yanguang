@@ -27,3 +27,7 @@ for(const id of ids){context.personId=id;const position=vm.runInContext('guideSe
 assert.equal(vm.runInContext("guideSeriesNeighbors('rousseau').next",context),null);assert.equal(vm.runInContext("guideSeriesNeighbors('rousseau').previous",context),null);assert.equal(vm.runInContext("guideSeriesNeighbors('kant').next",context),'fichte');assert.equal(vm.runInContext("guideSeriesNeighbors('hegel').next",context),null);
 for(const id of ['spinoza','locke','hume','kant','fichte','schelling','hegel']){const person=people.find(n=>n.personId===id);assert.equal(person.sections.length,4);assert(person.sections.every(s=>s.title&&s.text.length>=40));assert(person.sources.some(s=>s.accessed==='2026-11-08'&&s.locator&&s.url.startsWith('https://plato.stanford.edu/')));}
 console.log('人物深化与连续阅读验证通过：七人物各四节导读及来源、43人物主系列的边界与前后互逆。');
+
+for(const person of people){context.person=person;const events=vm.runInContext('guideContextEvents(person)',context);assert(events.length<=4);assert.equal(new Set(events.map(e=>e.id)).size,events.length);assert(events.every(e=>e.kind==='event'&&e.anchor>=person.range[0]&&e.anchor<=person.range[1]));assert.deepEqual(events.map(e=>e.anchor),events.map(e=>e.anchor).sort((a,b)=>a-b));}
+assert(people.some(person=>{context.person=person;return vm.runInContext('guideContextEvents(person).length>0',context);}));
+console.log('人物时代背景验证通过：仅复用既有纪事、限于人物所列日期、最多四条且按年排列。');
