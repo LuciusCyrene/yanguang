@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const root=new URL('../dist/',import.meta.url),data=JSON.parse(readFileSync(new URL('data/comparison-reader.json',root))),atlas=JSON.parse(readFileSync(new URL('data/atlas.json',root)));
+const works=data.cultureWorks,ids=new Set(works.map(w=>w.id));assert.equal(works.length,20);assert.equal(ids.size,20);
+const entities=[...data.cultureEvents,...data.culturePrehistory,...data.cultureTraditions,...data.cultureQuestions];
+for(const w of works){assert(w.attribution&&w.originalTitle&&w.genre&&w.dateLabel&&w.publicationLabel&&w.argument);assert(w.range[0]!==0&&w.range[0]<=w.range[1]&&w.range[1]<=1648);assert(w.sections.length===4&&w.sections.every(s=>s.text.length>=35));assert(w.passages.length>=2&&w.passages.every(p=>p.locator&&p.prompt));assert(w.misreading.claim&&w.misreading.correction);assert(w.sources.length&&w.sources.every(s=>new URL(s.url).protocol==='https:'&&s.locator&&s.kind));assert(w.questionIds.every(id=>data.cultureQuestions.some(q=>q.id===id)));assert(w.relatedCultureIds.every(id=>entities.some(e=>e.id===id)));assert(w.personIds.every(id=>data.people.some(p=>p.id===id)));assert(!data.worldEvents.some(e=>e.id===w.id));}
+for(const e of [...entities,...data.people])for(const id of e.workIds||[])assert(ids.has(id),`${e.id} -> ${id}`);
+assert(works.find(w=>w.id==='work-apology').attribution.includes('作者：柏拉图'));assert(works.find(w=>w.id==='work-enchiridion').attribution.includes('整理编纂：阿里安'));assert(data.people.find(p=>p.id==='galileo').workIds.includes('work-dialogue'));
+for(const w of works)assert(entities.some(e=>e.workIds.includes(w.id)),`${w.id} unreachable`);
+const ctx=vm.createContext({atlas,moduleOf:e=>e.module||'acts'});vm.runInContext(readFileSync(new URL('world-culture.js',root),'utf8')+'\n'+readFileSync(new URL('philosophy-works.js',root),'utf8')+'\n'+readFileSync(new URL('comparison-reader.js',root),'utf8')+'\ncomparisonReaderData='+JSON.stringify(data),ctx);
+for(const w of works){assert.equal(vm.runInContext(`cultureEntity('${w.id}').id`,ctx),w.id);assert.equal(vm.runInContext(`cultureModeFor('${w.id}')`,ctx),'works');assert(vm.runInContext(`validReaderBookmark(${JSON.stringify({version:1,kind:'culture',id:w.id,year:30,filters:{period:'all',query:w.title,topic:'',full:false,workGenre:w.genre}})})`,ctx));}
+assert.equal(vm.runInContext("validWorkSelection(['work-republic','work-republic','missing','work-summa','work-prince']).join(',')",ctx),'work-republic,work-summa');assert.equal(vm.runInContext("validWorkSelection(null).length",ctx),0);
+ctx.localStorage={getItem:()=>{throw Error('denied');},setItem:()=>{throw Error('denied');}};assert.doesNotThrow(()=>vm.runInContext('loadWorkComparison();saveWorkComparison()',ctx));assert.equal(vm.runInContext('workComparisonIds.length',ctx),0);assert.doesNotThrow(()=>vm.runInContext("setWorkComparison('missing')",ctx));
+assert(vm.runInContext("readerMatches(cultureEntity('work-novum-organum'),'Novum Organum')",ctx));assert(vm.runInContext("readerMatches(cultureEntity('work-summa'),'异议')",ctx));assert(vm.runInContext("readerMatches(cultureEntity('work-ethics'),'尼科马可伦理学')",ctx));assert(vm.runInContext("readerMatches(cultureEntity('work-prince'),'1532')",ctx));
+assert.equal(vm.runInContext('readerEvents().length',ctx),344);
+console.log('著作导读验证通过：20部作品、写作与版本区分、章节路径及误读辨析、双向关联、跨年书签、中英文检索、两部选择上限及损坏／禁用存储降级。');

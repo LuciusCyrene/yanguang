@@ -1,0 +1,6 @@
+/* Adapt only the mounted comparison view; all source files remain untouched. */
+html.is-embed #scrubber-dock,html.is-embed #embed-badge,html.is-embed #embed-open,html.is-embed #embed-shield{display:none!important}
+html.is-embed #atlas-shell{grid-template-rows:0 minmax(0,1fr) 0!important}
+html.is-embed #viewport-frame{min-height:0!important}
+html.is-embed #embed-disclaimer{bottom:8px;font-size:9px}
+html.is-embed #map-key{bottom:32px;max-width:calc(100% - 80px)}

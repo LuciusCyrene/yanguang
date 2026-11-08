@@ -1,0 +1,16 @@
+{
+  "bounds": [
+    -7,
+    10,
+    48,
+    54
+  ],
+  "projection": "Web Mercator",
+  "tileZoom": 7,
+  "tileCount": 420,
+  "sources": [
+    "https://www.naturalearthdata.com/",
+    "https://registry.opendata.aws/terrain-tiles/"
+  ],
+  "note": "现代地形高程与海岸，用于地理参照，不是古代地貌复原。"
+}

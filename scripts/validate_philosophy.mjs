@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const root=new URL('../dist/',import.meta.url),data=JSON.parse(readFileSync(new URL('data/comparison-reader.json',root))),atlas=JSON.parse(readFileSync(new URL('data/atlas.json',root)));
+assert.equal(data.cultureQuestions.length,10);assert.equal(data.cultureRelations.length,26);assert.equal(data.people.length,71);
+const nodes=data.cultureNetworkLanes.flatMap(l=>l.personIds);assert.equal(nodes.length,26);assert.equal(new Set(nodes).size,26);
+const content=[...data.cultureEvents,...data.culturePrehistory,...data.cultureTraditions,...data.cultureQuestions],ids=new Set(content.map(e=>e.id));assert.equal(ids.size,content.length);
+for(const q of data.cultureQuestions){assert.equal(q.sections.length,6);assert(q.sections.every(s=>s.text.length>=45));assert(q.questions.length>=3&&q.works.length>=2);assert(q.keyTerms.length===3&&q.positions.length===3&&q.argument.steps.length===4);assert(q.argument.caution.includes('编者'));assert(q.keyTerms.every(t=>t.term&&t.definition.length>=20));assert(q.range[0]!==0&&q.range[1]<=1648);for(const id of q.relatedCultureIds)assert(ids.has(id));}
+for(const e of [...content,...data.people])for(const id of e.questionIds||[])assert(data.cultureQuestions.some(q=>q.id===id),`${e.id} -> ${id}`);
+assert.equal(data.philosophyReadingPaths.length,3);for(const path of data.philosophyReadingPaths){assert(path.description&&path.questionIds.length>=3);assert(path.questionIds.every(id=>data.cultureQuestions.some(q=>q.id===id)));}
+const relationIds=new Set();for(const r of data.cultureRelations){assert(!relationIds.has(r.id));relationIds.add(r.id);assert(nodes.includes(r.fromId)&&nodes.includes(r.toId)&&r.fromId!==r.toId);assert(['learning','translation','reception','critique','context'].includes(r.type));assert(r.summary.length>=45&&r.sources.length>0);}
+for(const id of nodes){assert(data.people.some(p=>p.id===id));assert(data.cultureRelations.some(r=>r.fromId===id||r.toId===id));}
+const local=[];for(const e of [...content,...data.people,...data.cultureRelations])for(const s of e.sources||[]){assert(s.locator&&s.note&&s.kind&&s.title);if(s.localDocument){local.push(s);const d=s.localDocument;assert.equal(d.fileName,'西方哲学史 第七版.pdf');assert(Number.isInteger(d.printedPage)&&d.printedPage>0&&d.pdfPage===d.printedPage+15&&d.pdfPage<=800);assert(['页面已抽读核对','目录定位已核，正文待逐页核对'].includes(d.verification));assert(!s.url);}else assert.equal(new URL(s.url).protocol,'https:');}
+assert(local.some(s=>s.localDocument.verification.includes('待逐页')));assert(local.some(s=>s.localDocument.printedPage===67));assert(!JSON.stringify(data).includes('/Users/'));
+const ctx=vm.createContext({atlas,moduleOf:e=>e.module||'acts'});vm.runInContext(readFileSync(new URL('world-culture.js',root),'utf8')+'\n'+readFileSync(new URL('philosophy-network.js',root),'utf8')+'\n'+readFileSync(new URL('comparison-reader.js',root),'utf8')+'\ncomparisonReaderData='+JSON.stringify(data),ctx);
+for(const q of data.cultureQuestions){assert.equal(vm.runInContext(`cultureModeFor('${q.id}')`,ctx),'questions');assert(vm.runInContext(`validReaderBookmark(${JSON.stringify({version:1,kind:'culture',id:q.id,year:30,filters:{period:'all',query:q.title,topic:'',full:false}})})`,ctx));}
+for(const id of nodes){assert.equal(vm.runInContext(`cultureEntity('network-${id}').personId`,ctx),id);assert.equal(vm.runInContext(`cultureModeFor('network-${id}')`,ctx),'network');assert(vm.runInContext(`validReaderBookmark(${JSON.stringify({version:1,kind:'culture',id:'network-'+id,year:1273,filters:{period:'all',query:'',topic:'',full:false}})})`,ctx));}
+assert.equal(vm.runInContext("cultureEntity('network-missing')",ctx),undefined);
+assert(vm.runInContext("philosophyRelations().every(r=>r.fromId===philosophySelected||r.toId===philosophySelected)",ctx));vm.runInContext("philosophyRelationType='translation'",ctx);assert(vm.runInContext("philosophyRelations('拉丁').every(r=>r.type==='translation')",ctx));assert(vm.runInContext("philosophyRelations('不存在xyz').length===0",ctx));
+assert(atlas.events.filter(e=>e.module!=='ot').every(e=>vm.runInContext(`readerEvents().some(r=>r.eventIds.includes('${e.id}'))`,ctx)));
+console.log(`哲学深化验证通过：10问题／30术语释义／40论证步骤／3阅读路线、26人物节点／26分类关系，${local.length}处本地页码引用；概念互链、核验状态、书签、关系检索、来源与1648边界通过。`);

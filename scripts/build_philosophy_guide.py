@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+"""Editorial reading groups for the readable philosophy home; canonical records stay intact."""
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+GROUPS=[
+ ('origins','roots','自然、数与存在', '从四个主题导读进入，比较解释自然与变化的不同问题。',[],[],['ph-prehistory-miletus','ph-prehistory-pythagoras','ph-prehistory-heraclitus','ph-prehistory-parmenides']),
+ ('classical','classical-dialogue','苏格拉底与古典学园','围绕知识、德性和城邦展开阅读；共同分组不意味着观点一致。',['socrates','plato','aristotle'],[],[]),
+ ('hellenistic','life','幸福与生活的实践','并读伊壁鸠鲁与斯多亚传统，分别辨认其不同的幸福论证。',['epicurus','zeno-stoa','epictetus'],[],[]),
+ ('hellenistic','one','心灵与一者','从普罗提诺进入古代晚期的另一条思想线索。',['plotinus'],[],[]),
+ ('late-antique','faith-texts','古典文本与信仰中的哲学','沿心灵、恶、语言和文本传承阅读；三位作者并不构成同一个学派。',['augustine','pseudo-dionysius','boethius'],['plotinus'],[]),
+ ('medieval','languages','阿拉伯语与犹太哲学的对话','并列阅读不同语言与宗教语境，继续追踪文本的翻译和接受。',['avicenna','averroes','maimonides'],[],[]),
+ ('medieval','schools','拉丁语传统：学校、大学与论证','从解释、共相与信仰和理性进入；方法与结论的分歧在人物详读中展开。',['eriugena','anselm','abelard','aquinas','roger-bacon','duns-scotus','ockham'],[],[]),
+ ('medieval','humanist-turn','走向人文主义的转折','彼特拉克跨越编选分期，亦可由下一时代的人文主义线索回看。',['petrarch'],[],[]),
+ ('renaissance','humanities','人文主义、文本与人的经验','在同一阅读区域比较语文学、教育、政治及个人经验；不将所有人归入同一组织或学派。',['christine','cusa','valla','ficino','machiavelli','erasmus','montaigne'],['petrarch'],[]),
+ ('early-modern','rationalism','实体与知识：理性主义线索','以三位作者的不同体系为入口；理性主义这一传统标签不概括其全部哲学。',['descartes','spinoza','leibniz'],[],[]),
+ ('early-modern','experience','经验、方法与自然研究','比较培根、洛克及伽利略的不同任务；此处是问题导向的阅读分组。',['bacon','locke','galileo'],[],[]),
+ ('enlightenment','knowledge','经验、知觉与知识的限度','将贝克莱与休谟并读，并可回看洛克；具体立场不能由经验主义标签代替。',['berkeley','hume'],['locke'],[]),
+ ('enlightenment','public','启蒙的公共讨论','由知识编纂、宽容与公共论辩进入。',['voltaire','diderot'],[],[]),
+ ('enlightenment','education','自由、教育与共同体','把教育与政治问题分别展开，再比较其联系。',['rousseau'],[],[]),
+ ('german','critical','批判哲学与后康德体系','在同一系列中分辨继承、批评和不同阶段的写作；四位作者并非一个立场。',['kant','fichte','schelling','hegel'],['hume'],[]),
+]
+QUESTIONS={
+ 'socrates':'怎样检验一种值得过的生活？','plato':'知识与善如何可能？','aristotle':'事物是什么，德性如何养成？','epicurus':'如何理解快乐与安宁？','zeno-stoa':'怎样在自然与共同生活中行动？','epictetus':'什么由我们掌握，什么不由我们掌握？','plotinus':'心灵与一者如何关联？','augustine':'如何理解恶、自由与内在心灵？','pseudo-dionysius':'语言如何指向又不能穷尽神圣？','boethius':'命运、自由与安慰如何并论？','eriugena':'如何在解释中讨论自然与神？','avicenna':'存在与本质应怎样区分？','anselm':'信仰如何寻求理解？','abelard':'辩证讨论如何处理不同命题？','averroes':'如何解释亚里士多德与理智问题？','maimonides':'如何面对经文、理性与神的语言？','aquinas':'信仰与理性的论证各自做什么？','roger-bacon':'语言、经验与知识如何协作？','duns-scotus':'如何讨论个别性、意志与存在？','ockham':'共相与认识应如何解释？','petrarch':'古典阅读如何关联人的生活？','christine':'谁能参与知识与人的价值讨论？','cusa':'知识的限度可以怎样被认识？','valla':'语言与史料如何帮助判断文本？','ficino':'如何重新阅读柏拉图传统？','machiavelli':'政治行动应放回什么语境理解？','erasmus':'文本、教育与信仰怎样关联？','montaigne':'怎样检验判断与自己的经验？','bacon':'研究自然需要怎样的方法？','galileo':'观察、数学与自然论证怎样相连？','descartes':'怀疑之后，知识如何获得根据？','spinoza':'实体、情感与自由怎样相连？','leibniz':'为何存在理由与秩序？','locke':'观念从何而来，知识止于何处？','berkeley':'知觉、观念与精神怎样关联？','voltaire':'哲学怎样进入公共讨论？','hume':'经验如何形成因果信念？','diderot':'知识怎样被分类、编纂与传播？','rousseau':'自由、教育与共同体怎样相容？','kant':'经验知识的条件与理性的限度是什么？','fichte':'知识的体系起点如何被论证？','schelling':'自然、自由与体系如何重新相连？','hegel':'自由如何在意识与制度中展开？'}
+def main():
+ atlas=json.loads((ROOT/'dist/data/philosophy-atlas.json').read_text());people={n['personId'] for n in atlas['nodes'] if n['kind']=='person'}
+ primary=[id for g in GROUPS for id in g[4]];assert set(primary)==people and len(primary)==len(people)==43;assert set(QUESTIONS)==people
+ groups=[dict(phaseId=p,id=id,title=title,intro=intro,personIds=ids,alsoPersonIds=also,entryIds=entries) for p,id,title,intro,ids,also,entries in GROUPS]
+ sources=[dict(title='斯坦福哲学百科：理性主义与经验主义',url='https://plato.stanford.edu/entries/rationalism-empiricism/',kind='阅读分类的研究入口',locator='传统分类及其局限',note='本站分组为导航安排，不把人物的全部思想归结为单一标签。'),dict(title='斯坦福哲学百科：中世纪哲学',url='https://plato.stanford.edu/entries/medieval-philosophy/',kind='多语言传统的研究入口',locator='希腊语、拉丁语、阿拉伯语及犹太传统',note='语言、文本接受与宗教语境可以交叉，主分组不表示排他归属。')]
+ data=dict(version=1,title='时代与人物',editorial='同系列按阅读问题与传统编选，既有学派线索，也有跨立场的比较分组；人物可跨时期、跨传统。主卡片只列一次，交叉入口另列。人物与作品的日期、归属及出处以各条详读为准。',groups=groups,questions=QUESTIONS,sources=sources)
+ (ROOT/'dist/data/philosophy-guide.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');print(f'{len(groups)} groups / {len(primary)} people / {sum(len(g[5]) for g in GROUPS)} cross references')
+if __name__=='__main__':main()

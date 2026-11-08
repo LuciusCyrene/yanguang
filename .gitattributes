@@ -1,0 +1,4 @@
+# Imported outline preserves CR inside topics and original trailing spaces.
+# Disable EOL normalization and whitespace lint only for these verbatim archives.
+scripts/sources/philosophy-tree-original.txt -text -whitespace
+dist/data/philosophy-tree-original.txt -text -whitespace

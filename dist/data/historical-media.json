@@ -1,0 +1,860 @@
+{
+  "editorial": "图像年代与事件年代分开；后世作品不是同时代相貌证据。卡片表示阶段背景，纪事仅显示浏览年及此前内容。",
+  "cards": [
+    {
+      "id": "pentecost",
+      "side": "west",
+      "range": [
+        30,
+        44
+      ],
+      "title": "耶路撒冷：群体的开始",
+      "person": "彼得 · 耶路撒冷信徒",
+      "imageKind": "后世宗教绘画",
+      "caption": "格列柯《五旬节》，约1600年；表达宗教主题，并非公元30年的现场记录。",
+      "summary": "使徒行传从耶路撒冷的聚集、讲道与群体生活展开；初期活动处在罗马帝国与犹太地方社会之中。",
+      "facts": [
+        {
+          "year": 30,
+          "text": "五旬节：门徒讲道与群体形成，年代为推定编年。",
+          "eventId": "acts-001"
+        },
+        {
+          "year": 33,
+          "text": "司提反事件与教会四散，叙事随后转向撒马利亚及更广地区。",
+          "eventId": "acts-002"
+        }
+      ],
+      "historySource": "https://www.biblegateway.com/passage/?search=Acts+2-8&version=CUVS",
+      "image": "assets/history/01.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:El_Greco_006.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/El_Greco_006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "El Greco",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "b5624ae7400947108b5cad840654faab8fff53a77749201ce4d57d61e5f3332e",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:El Greco 006.jpg"
+    },
+    {
+      "id": "paul",
+      "side": "west",
+      "range": [
+        45,
+        69
+      ],
+      "title": "地中海：跨城的福音网络",
+      "person": "保罗 · 巴拿巴 · 西拉",
+      "imageKind": "后世想象画像",
+      "caption": "伦勃朗《使徒保罗》，约1633年（作品断代存疑）；不代表保罗的真实相貌。",
+      "summary": "港口、罗马道路、会堂与家庭，为跨语言的传播提供不同空间。保罗的书信与使徒行传应区分文类、互相参读。",
+      "facts": [
+        {
+          "year": 46,
+          "text": "安提阿差遣巴拿巴与扫罗；使徒行传进入海路宣教叙事。",
+          "eventId": "acts-013"
+        },
+        {
+          "year": 49,
+          "text": "耶路撒冷的讨论涉及外邦信徒与律法实践（约年）。",
+          "eventId": null
+        },
+        {
+          "year": 62,
+          "text": "使徒行传以保罗在罗马的传讲结束，未叙述他的死亡。",
+          "eventId": "acts-073"
+        }
+      ],
+      "historySource": "https://www.biblegateway.com/passage/?search=Acts+13-28&version=CUVS",
+      "image": "assets/history/02.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_163.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Rembrandt_Harmensz._van_Rijn_163.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Rembrandt",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "e227e7ce146bf19cc172f3ed0ad458440078ec9aa895540811f5a01cf4e86c62",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Rembrandt Harmensz. van Rijn 163.jpg"
+    },
+    {
+      "id": "titus",
+      "side": "west",
+      "range": [
+        70,
+        311
+      ],
+      "title": "圣殿被毁之后：多地教会与帝国",
+      "person": "提多 · 游斯丁 · 爱任纽",
+      "imageKind": "古代浮雕的现代复制品照片",
+      "caption": "贝特哈特福措特博物馆展出的提多凯旋门浮雕复制品；罗马原作约公元81年，纪念70年战争，不是战场照片。",
+      "summary": "70年耶路撒冷被罗马军攻陷。此后的基督徒群体分布于多个城市，面对身份界定、神学争论和并不连续的地方或帝国迫害。",
+      "facts": [
+        {
+          "year": 70,
+          "text": "耶路撒冷与圣殿的毁坏，改变犹太社会及基督徒群体的处境。",
+          "eventId": null
+        },
+        {
+          "year": 150,
+          "text": "游斯丁以护教写作向帝国社会解释基督徒信仰。",
+          "eventId": "church-009"
+        },
+        {
+          "year": 303,
+          "text": "戴克里先时期的大迫害开始，地区执行情况有差异。",
+          "eventId": "church-023"
+        }
+      ],
+      "historySource": "https://www.ccel.org/ccel/schaff/npnf201.html",
+      "image": "assets/history/03.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_Menorah_22.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Arch_of_Titus_Menorah_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "original file by Steerpike",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sha256": "35daa65fd2257d8d737e9b595ef6cbc3511f425ff0536fe0ad16253e7a1b9d1d",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Arch of Titus Menorah 22.jpg"
+    },
+    {
+      "id": "constantine",
+      "side": "west",
+      "range": [
+        312,
+        493
+      ],
+      "title": "帝国承认与信仰争论",
+      "person": "君士坦丁 · 亚他那修 · 奥古斯丁",
+      "imageKind": "古代雕像残件的现代照片",
+      "caption": "君士坦丁巨像头像，4世纪原作；现存于罗马卡比托利欧博物馆。",
+      "summary": "皇帝的支持扩大了教会的公共空间，也使教义、城市主教和帝国政治更深地交织；这不是一条没有分歧的胜利进程。",
+      "facts": [
+        {
+          "year": 312,
+          "text": "米尔维安桥之战后，君士坦丁的政治地位与宗教政策发生转折。",
+          "eventId": "church-025"
+        },
+        {
+          "year": 325,
+          "text": "尼西亚会议讨论基督论争议；会议后争论仍持续。",
+          "eventId": "church-029"
+        },
+        {
+          "year": 451,
+          "text": "迦克墩会议的定义与接受问题，影响此后不同教会传统。",
+          "eventId": "church-046"
+        }
+      ],
+      "historySource": "https://www.ccel.org/ccel/schaff/npnf201.html",
+      "image": "assets/history/04.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Head_of_Colossus_of_Constantine,_Aug_24_2021.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Head_of_Colossus_of_Constantine%2C_Aug_24_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "D. Benjamin Miller",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "dbfd097c743140ce49ac63d0f82ca528b99a7584c0e0b9e72b0c0490e677fc55",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Head of Colossus of Constantine, Aug 24 2021.jpg"
+    },
+    {
+      "id": "justinian",
+      "side": "west",
+      "range": [
+        494,
+        799
+      ],
+      "title": "东罗马与跨亚洲的教会",
+      "person": "查士丁尼一世 · 阿罗本",
+      "imageKind": "同时代镶嵌画的现代照片",
+      "caption": "拉文纳圣维塔莱教堂查士丁尼镶嵌画，6世纪；是皇帝与礼仪权威的图像表达。",
+      "summary": "东罗马延续帝国与教会的制度；波斯及更东方的教会有自己的语言、礼仪与组织网络，不能仅用拉丁西欧的线索概括。",
+      "facts": [
+        {
+          "year": 537,
+          "text": "君士坦丁堡圣索菲亚教堂落成，展现帝国礼仪与建筑资源。",
+          "eventId": "world-004"
+        },
+        {
+          "year": 635,
+          "text": "阿罗本来华的年代见于781年景教碑的回顾记述。",
+          "eventId": "world-010"
+        },
+        {
+          "year": 781,
+          "text": "景教碑记录唐代教会的自我表述及其政治语言。",
+          "eventId": "world-014"
+        }
+      ],
+      "historySource": "https://sourcebooks.fordham.edu/source/781nestorian.asp",
+      "image": "assets/history/05.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Justinian_mosaic,_San_Vitale,_consecrated_547,_Ravenna,_Italy.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Justinian_mosaic%2C_San_Vitale%2C_consecrated_547%2C_Ravenna%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Steven Zucker",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "sha256": "34c8086eb5b0dc21cff6a6f826acf9694b7643b74955eb4fcd3332caf54ea028",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Justinian mosaic, San Vitale, consecrated 547, Ravenna, Italy.jpg"
+    },
+    {
+      "id": "charlemagne",
+      "side": "west",
+      "range": [
+        800,
+        1208
+      ],
+      "title": "拉丁西欧：皇权、修院与改革",
+      "person": "查理曼 · 修院群体",
+      "imageKind": "后世想象画像",
+      "caption": "丢勒《查理曼》，1512年；距800年加冕约七百年，图中徽号也带有后世观念。",
+      "summary": "加冕、修院改革、教权与王权冲突，以及十字军运动，构成不同的历史过程。西欧的制度变化不等于整个世界教会的共同经验。",
+      "facts": [
+        {
+          "year": 800,
+          "text": "查理曼在罗马受加冕，西方帝国权威得到新的表达。",
+          "eventId": null
+        },
+        {
+          "year": 910,
+          "text": "克吕尼修院的建立开启长时段改革网络。",
+          "eventId": "world-020"
+        },
+        {
+          "year": 1099,
+          "text": "十字军攻占耶路撒冷，伴随严重宗教暴力。",
+          "eventId": "world-026"
+        }
+      ],
+      "historySource": "https://sourcebooks.fordham.edu/basis/einhard.asp",
+      "image": "assets/history/06.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Charlemagne-by-Durer.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Charlemagne-by-Durer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Albrecht Dürer",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "3de2b6242cc1dcae1aec3c2ef9182fb8979d512540aa3b796ab23d24e950083d",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Charlemagne-by-Durer.jpg"
+    },
+    {
+      "id": "francis",
+      "side": "west",
+      "range": [
+        1209,
+        1454
+      ],
+      "title": "城市、托钵团与晚期中世纪",
+      "person": "方济各 · 托钵团体",
+      "imageKind": "13世纪宗教壁画",
+      "caption": "契马布埃《圣母与圣婴、方济各及四位天使》，约1278—1280年；方济各是右侧站立人物，绘于其去世后数十年。",
+      "summary": "城市社会催生贫穷实践、讲道、大学神学和新的宗教团体；教宗分裂与改革呼声也在这一时期积累。",
+      "facts": [
+        {
+          "year": 1209,
+          "text": "方济各团体早期获口头认可，确切程序与叙述须区分后来的传记传统。",
+          "eventId": null
+        },
+        {
+          "year": 1215,
+          "text": "第四次拉特朗会议处理教义、牧养与制度问题。",
+          "eventId": "world-032"
+        },
+        {
+          "year": 1378,
+          "text": "拉丁教会进入多位教宗竞争的分裂局面。",
+          "eventId": "world-039"
+        }
+      ],
+      "historySource": "https://sourcebooks.fordham.edu/source/stfran-rule.asp",
+      "image": "assets/history/07.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Cimabue_-_Madonna_Enthroned_with_the_Child,_St_Francis_and_Four_Angels_-_WGA04920.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cimabue_-_Madonna_Enthroned_with_the_Child%2C_St_Francis_and_Four_Angels_-_WGA04920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Cimabue",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "503ccb5d1643437c8ef3a0bb7d9fd4c64925f93d9187efc8db5c9ce09ae4e36b",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Cimabue - Madonna Enthroned with the Child, St Francis and Four Angels - WGA04920.jpg"
+    },
+    {
+      "id": "print",
+      "side": "west",
+      "range": [
+        1455,
+        1516
+      ],
+      "title": "印刷与改革前夕",
+      "person": "古登堡 · 读者与印刷工匠",
+      "imageKind": "15世纪印本的现代照片",
+      "caption": "纽约公共图书馆藏古登堡圣经，约1455年印行；照片由Kevin Eng拍摄。",
+      "summary": "金属活字印刷扩大了文本复制的规模。它推动宗教讨论的传播，但改革还涉及教会治理、社会关系和地方政治。",
+      "facts": [
+        {
+          "year": 1455,
+          "text": "古登堡圣经约在此时完成，成为欧洲早期活字印刷的重要实物。",
+          "eventId": "world-045"
+        }
+      ],
+      "historySource": "https://www.nypl.org/events/exhibitions/gutenberg-bible",
+      "image": "assets/history/08.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible,_Lenox_Copy,_New_York_Public_Library,_2009._Pic_01.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "NYC Wanderer (Kevin Eng)",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "sha256": "c690ce423c3a6ee5443477ffc6d00062d08996a12b0548cda0a422f7a82a2d54",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Gutenberg Bible, Lenox Copy, New York Public Library, 2009. Pic 01.jpg"
+    },
+    {
+      "id": "luther",
+      "side": "west",
+      "range": [
+        1517,
+        1535
+      ],
+      "title": "改革争论进入公共领域",
+      "person": "马丁·路德 · 梅兰希顿",
+      "imageKind": "同时代肖像",
+      "caption": "老克拉纳赫工作室，路德像，1529年；与1517年事件相隔十二年。",
+      "summary": "赎罪、称义、教会权威和礼仪成为公开争论；路德宗、改革宗、再洗礼派与英国改革的发展不能混为一条路线。",
+      "facts": [
+        {
+          "year": 1517,
+          "text": "九十五条论纲围绕赎罪实践展开争论；“钉门”细节有史料讨论。",
+          "eventId": "world-048"
+        },
+        {
+          "year": 1525,
+          "text": "再洗礼群体强调信仰告白、自愿群体与洗礼实践。",
+          "eventId": "world-051"
+        },
+        {
+          "year": 1530,
+          "text": "奥格斯堡信纲成为路德宗信仰表达的重要文本。",
+          "eventId": "world-054"
+        }
+      ],
+      "historySource": "https://bookofconcord.org/augsburg-confession/",
+      "image": "assets/history/09.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:1529MartinLuther.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/1529MartinLuther.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Workshop of Lucas Cranach the Elder",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "f99d0a8456aa25ee7b21950d32fceeb312f12a12fa798d50f558da601e645d45",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:1529MartinLuther.jpg"
+    },
+    {
+      "id": "calvin",
+      "side": "west",
+      "range": [
+        1536,
+        1581
+      ],
+      "title": "多种改革与跨洲传播",
+      "person": "加尔文 · 天主教改革者",
+      "imageKind": "16世纪肖像传统",
+      "caption": "依克里斯托法诺·德尔·阿尔蒂西莫作品绘制的加尔文肖像，约1563—1600年。",
+      "summary": "日内瓦改革、英国的制度变化、特伦托会议和耶稣会形成并行而有冲突的历史。欧洲以外的教会也继续发展。",
+      "facts": [
+        {
+          "year": 1540,
+          "text": "耶稣会获得教宗批准，参与教育与跨洲传教。",
+          "eventId": "world-057"
+        },
+        {
+          "year": 1555,
+          "text": "奥格斯堡和约给予特定帝国等级有限的宗教安排。",
+          "eventId": "world-062"
+        },
+        {
+          "year": 1563,
+          "text": "特伦托会议结束；法令的落实仍依地方条件而异。",
+          "eventId": "world-065"
+        }
+      ],
+      "historySource": "https://history.hanover.edu/texts/trent.html",
+      "image": "assets/history/10.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:John_Calvin_Titian_B.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/John_Calvin_Titian_B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "After Cristofano dell'Altissimo",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "9360e270e25ca37ccd39fc8e7f4a824594dfd07af27ba54ceae570005466a010",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:John Calvin Titian B.jpg"
+    },
+    {
+      "id": "ricci-west",
+      "side": "west",
+      "range": [
+        1582,
+        1648
+      ],
+      "title": "翻译、跨文化交往与战争",
+      "person": "利玛窦 · 徐光启 · 汤若望",
+      "imageKind": "后世版画",
+      "caption": "基歇尔《中国图说》中的利玛窦与徐光启，1667年；出版晚于本项目1648年的时间终点。",
+      "summary": "跨洲交往涉及语言学习、数学与历法翻译，也涉及礼仪与政治秩序。欧洲同时经历三十年战争，并在1648年达成一组和平协议。",
+      "facts": [
+        {
+          "year": 1582,
+          "text": "利玛窦抵达澳门，开始进入中国的准备。",
+          "eventId": "world-081"
+        },
+        {
+          "year": 1607,
+          "text": "徐光启与利玛窦合作刊行《几何原本》前六卷。",
+          "eventId": "world-084"
+        },
+        {
+          "year": 1644,
+          "text": "汤若望呈进历法成果；采用与施行须区分1644、1645年。",
+          "eventId": "world-086"
+        }
+      ],
+      "historySource": "https://www.loc.gov/item/2010585650/",
+      "image": "assets/history/11.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Matteo_Ricci_and_Xu_Guangqi_from_Athanasius_Kircher_(3756759)_(cropped).jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Matteo_Ricci_and_Xu_Guangqi_from_Athanasius_Kircher_%283756759%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Athanasius Kircher",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "27bf9778dbc33e8cb747876c9768bca7fb06659aabdee1c1c45e938f8e963b1f",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Matteo Ricci and Xu Guangqi from Athanasius Kircher (3756759) (cropped).jpg"
+    },
+    {
+      "id": "han",
+      "side": "china",
+      "range": [
+        30,
+        183
+      ],
+      "title": "东汉：重建与知识传播",
+      "person": "刘秀（在位25—57）· 蔡伦",
+      "imageKind": "后世想象画像",
+      "caption": "《圣君贤臣全身像册》中的汉光武帝，作者与具体年代未详；非同时代肖像。",
+      "summary": "新约时代的中国处于东汉。洛阳的政治重建、经学与书写材料的变化，可与地中海的道路和书信网络比较，但不能据此推定双方已有教会往来。",
+      "facts": [
+        {
+          "year": 25,
+          "text": "刘秀称帝，东汉以洛阳为都；这是当前时间轴起点之前的背景。",
+          "eventId": null
+        },
+        {
+          "year": 36,
+          "text": "公孙述政权覆亡，东汉结束主要的统一战争。",
+          "eventId": null
+        },
+        {
+          "year": 105,
+          "text": "《后汉书》记蔡伦上奏造纸成果；不应表述为此年才首次出现纸。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://ctext.org/hou-han-shu/zh",
+      "image": "assets/history/12.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Liu_Xiu_(Emperor_Guangwu_of_Han).png",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Liu_Xiu_%28Emperor_Guangwu_of_Han%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "a3d95d21d3ac101b7bf3fc53092b6294ec8c40956861756b224cca27de293d4c",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Liu Xiu (Emperor Guangwu of Han).png"
+    },
+    {
+      "id": "cao",
+      "side": "china",
+      "range": [
+        184,
+        316
+      ],
+      "title": "汉末至西晋：战争与统一",
+      "person": "曹操 · 曹丕 · 司马炎",
+      "imageKind": "后世文学插图",
+      "caption": "清代《三国演义》版本中的曹操像，带有文学人物塑造，不是历史实录肖像。",
+      "summary": "汉末政治秩序瓦解后，魏、蜀、吴各自建立制度。西晋的短期统一之后，北方战争与人口迁徙改变了文化和宗教传播的空间。",
+      "facts": [
+        {
+          "year": 184,
+          "text": "黄巾起事，汉末政治与地方军事局势进一步变化。",
+          "eventId": null
+        },
+        {
+          "year": 220,
+          "text": "曹丕代汉建立魏；曹操本人没有称帝。",
+          "eventId": null
+        },
+        {
+          "year": 280,
+          "text": "西晋灭吴，完成阶段性的统一。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://ctext.org/sanguozhi/zh",
+      "image": "assets/history/13.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Cao_Cao_Portrait_ROTK.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Cao_Cao_Portrait_ROTK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "371cef29545d7c93eaf045e82fa3deba1a6944966920042a23272f8c8b8399ae",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Cao Cao Portrait ROTK.jpg"
+    },
+    {
+      "id": "wang",
+      "side": "china",
+      "range": [
+        317,
+        580
+      ],
+      "title": "东晋南北朝：迁徙与多种思想",
+      "person": "王羲之 · 士族与僧侣",
+      "imageKind": "后世想象画像",
+      "caption": "王羲之后世画像，原画作者与年代未详；仅作人物识别辅助。",
+      "summary": "东晋及南北朝时期，南北政权、士族文化与佛教译经网络并存。书法、清谈与宗教讨论体现了不同的公共和私人交往空间。",
+      "facts": [
+        {
+          "year": 317,
+          "text": "司马睿在建康建立晋政权，东晋时期开始。",
+          "eventId": null
+        },
+        {
+          "year": 353,
+          "text": "王羲之主持兰亭雅集，相关诗文成为后世文化记忆。",
+          "eventId": null
+        },
+        {
+          "year": 386,
+          "text": "北魏建立；北方的政治整合与宗教赞助继续发展。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://fairbank.fas.harvard.edu/research/blog/toward-a-view-of-unofficial-friendships-in-fourth-century-china/",
+      "image": "assets/history/14.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wang_Xizhi.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Wang_Xizhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Unknown authorUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "98ce4f4d27bbf3c58f08c6534bc620bcf3a6d995a6119002f11bd1c442f43507",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Wang Xizhi.jpg"
+    },
+    {
+      "id": "sui",
+      "side": "china",
+      "range": [
+        581,
+        617
+      ],
+      "title": "隋：重新统一与制度整合",
+      "person": "隋文帝杨坚 · 隋炀帝杨广",
+      "imageKind": "后世宫廷绘画",
+      "caption": "《历代帝王图》传统中的隋文帝，7世纪作品，传统归于阎立本。",
+      "summary": "隋的统一结束长期南北分立；行政、交通和征役政策连接不同区域，也产生沉重社会负担。隋亡以后，唐继承并调整其中许多制度。",
+      "facts": [
+        {
+          "year": 581,
+          "text": "杨坚建立隋朝，史称隋文帝。",
+          "eventId": null
+        },
+        {
+          "year": 589,
+          "text": "隋灭陈，结束南北长期分立。",
+          "eventId": null
+        },
+        {
+          "year": 605,
+          "text": "隋炀帝时期的大规模运河工程展开，水路交通与征役并行。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://www.metmuseum.org/essays/imperial-china-the-art-of-the-sui-581-618-and-tang-618-907-dynasties",
+      "image": "assets/history/15.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Sui_Wendi_Tang.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sui_Wendi_Tang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Yan Li-pen",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "4e8e998b534b8e4bc87ea1a597f5f102dffbeec0cf76fea16663502620fa47cb",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Sui Wendi Tang.jpg"
+    },
+    {
+      "id": "tang",
+      "side": "china",
+      "range": [
+        618,
+        780
+      ],
+      "title": "唐前期：长安与外来宗教",
+      "person": "唐太宗李世民（在位626—649）· 阿罗本",
+      "imageKind": "后世宫廷画像",
+      "caption": "明代绘制的唐太宗像，非7世纪本人写照。",
+      "summary": "长安汇集来自不同地区的商旅、使节与宗教人员。景教进入唐朝的叙事，应与唐代对其他外来宗教的不同政策一起阅读。",
+      "facts": [
+        {
+          "year": 618,
+          "text": "唐朝建立；太宗在626年继位，不能将两者混为同年。",
+          "eventId": null
+        },
+        {
+          "year": 635,
+          "text": "据781年景教碑回顾，阿罗本于贞观九年抵达长安。",
+          "eventId": "world-010"
+        },
+        {
+          "year": 638,
+          "text": "景教碑记诏许传教及建寺；这是碑文保存的朝廷许可叙事。",
+          "eventId": "world-077"
+        }
+      ],
+      "historySource": "https://sourcebooks.fordham.edu/source/781nestorian.asp",
+      "image": "assets/history/16.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:TangTaizongP.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/TangTaizongP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Unknown artistUnknown artist",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "2177af695e34133a10e72e26e825ee7415161674a219812434ed8ad9e5d57af8",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:TangTaizongP.jpg"
+    },
+    {
+      "id": "stele",
+      "side": "china",
+      "range": [
+        781,
+        959
+      ],
+      "title": "景教碑与唐后期的宗教处境",
+      "person": "景净 · 唐代景教群体",
+      "imageKind": "古代碑刻的现代照片",
+      "caption": "《大秦景教流行中国碑》碑首照片，原碑781年立；摄影David Castor。碑文表达教会自述，不是中立的完整通史。",
+      "summary": "碑上的汉文与叙利亚文保存了人员、教义及政治表达。845年的政策改变外来宗教人员的处境；唐末五代的长期变化仍需更多地方材料。",
+      "facts": [
+        {
+          "year": 781,
+          "text": "景教碑立于长安，记述此前约一个半世纪的传播。",
+          "eventId": "world-014"
+        },
+        {
+          "year": 845,
+          "text": "会昌宗教政策波及景教等外来宗教人员。",
+          "eventId": "world-078"
+        },
+        {
+          "year": 907,
+          "text": "唐亡，北方进入五代更替；南方同时存在多个政权。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://sourcebooks.fordham.edu/source/781nestorian.asp",
+      "image": "assets/history/17.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Nestorian_stele_1.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Nestorian_stele_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "David Castor",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "6c063a517fe0daf9248a43f37cfb2c53e339bc5e86e1a2a93624934d0e9607df",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Nestorian stele 1.jpg"
+    },
+    {
+      "id": "song",
+      "side": "china",
+      "range": [
+        960,
+        1270
+      ],
+      "title": "宋与辽金夏：多政权并立",
+      "person": "宋太祖赵匡胤（在位960—976）",
+      "imageKind": "约1000年的宫廷画像",
+      "caption": "宋太祖像，匿名画家，约1000年；绘于其去世后，藏台北故宫。",
+      "summary": "宋的城市、印刷与士大夫文化发展于多政权并立的格局中。中国地图不应把这一时期处理成只有宋朝的单一疆域。",
+      "facts": [
+        {
+          "year": 960,
+          "text": "赵匡胤建立宋朝。",
+          "eventId": null
+        },
+        {
+          "year": 1127,
+          "text": "靖康之变后，宋廷南渡；金占据北方大片地区。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://afe.easia.columbia.edu/songdynasty-module/index.html",
+      "image": "assets/history/18.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Song_Taizu,_0.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Song_Taizu%2C_0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "AnonymousUnknown author",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "2f2925ef6bcf93968dcd473abe6a4237e9faf334e523c3f79bcf13cbf6115896",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Song Taizu, 0.jpg"
+    },
+    {
+      "id": "yuan",
+      "side": "china",
+      "range": [
+        1271,
+        1367
+      ],
+      "title": "元：跨欧亚的人员网络",
+      "person": "忽必烈（在位1260—1294）· 孟高维诺",
+      "imageKind": "身后宫廷肖像",
+      "caption": "忽必烈像，约1294年，传统归阿尼哥；属身后肖像，并作年轻化处理。",
+      "summary": "蒙古统治形成跨欧亚的通道，东方教会与拉丁传教网络在元代中国并存。宗教优待、身份与地方处境并不完全一致。",
+      "facts": [
+        {
+          "year": 1271,
+          "text": "忽必烈定国号为大元；蒙古征服南宋尚未完成。",
+          "eventId": null
+        },
+        {
+          "year": 1279,
+          "text": "南宋覆亡，元完成对南宋地区的征服。",
+          "eventId": null
+        },
+        {
+          "year": 1307,
+          "text": "教宗任命孟高维诺为汗八里总主教；任命与其早前抵达须区分。",
+          "eventId": "world-080"
+        }
+      ],
+      "historySource": "https://afe.easia.columbia.edu/mongols/china/china.htm",
+      "image": "assets/history/19.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/YuanEmperorAlbumKhubilaiPortrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Araniko",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "0fd064ef10c416efd717e44118e7180321a5593113bd1cf44bfe6103105226d4",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:YuanEmperorAlbumKhubilaiPortrait.jpg"
+    },
+    {
+      "id": "ming",
+      "side": "china",
+      "range": [
+        1368,
+        1571
+      ],
+      "title": "明：重建秩序与海上联系",
+      "person": "朱元璋（在位1368—1398）· 郑和",
+      "imageKind": "明代宫廷肖像",
+      "caption": "明太祖朱元璋宫廷像，14世纪，藏台北故宫。",
+      "summary": "明初的国家重建与海上活动，处在元代跨欧亚联系转变之后。此前教会机构的延续问题，应依具体地区证据判断。",
+      "facts": [
+        {
+          "year": 1368,
+          "text": "朱元璋称帝建立明朝；元廷退出大都。",
+          "eventId": null
+        },
+        {
+          "year": 1405,
+          "text": "郑和首次下西洋，朝贡、外交与海上贸易相互交织。",
+          "eventId": null
+        }
+      ],
+      "historySource": "https://www.metmuseum.org/essays/ming-dynasty-1368-1644",
+      "image": "assets/history/20.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Hongwu1.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Hongwu1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "作者未详",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "98a6325b871015796e0f4b39224408b5c4048cb20f06ffe4b0165acb693b4d15",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Hongwu1.jpg"
+    },
+    {
+      "id": "wanli",
+      "side": "china",
+      "range": [
+        1572,
+        1606
+      ],
+      "title": "晚明：士人、传教与世界知识",
+      "person": "万历帝（在位1572—1620）· 利玛窦",
+      "imageKind": "明代宫廷肖像",
+      "caption": "万历帝宫廷画像，画家未详；历史人物画像不能说明所有晚明人的经验。",
+      "summary": "晚明的传教活动通过澳门、广东与内地城市逐步展开。地图、语言和士人交往为理解交流提供入口，宫廷许可与地方实践仍有区别。",
+      "facts": [
+        {
+          "year": 1572,
+          "text": "万历帝即位，张居正主持一系列政治与财政改革。",
+          "eventId": null
+        },
+        {
+          "year": 1583,
+          "text": "利玛窦等获准居留肇庆，开展中文学习与地方交往。",
+          "eventId": "world-082"
+        },
+        {
+          "year": 1602,
+          "text": "《坤舆万国全图》在北京刊行，呈现新的世界地理表达。",
+          "eventId": "world-083"
+        }
+      ],
+      "historySource": "https://www.loc.gov/item/2010585650/",
+      "image": "assets/history/21.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Wanli-Emperor.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Wanli-Emperor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Unidentified painter",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "4b9fb6cf9ad850d5be312b3221ae9e857cdd6db42af9915da229d9c9c4c41162",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Wanli-Emperor.jpg"
+    },
+    {
+      "id": "xu",
+      "side": "china",
+      "range": [
+        1607,
+        1648
+      ],
+      "title": "晚明至清初：翻译与历法",
+      "person": "徐光启（1562—1633）· 利玛窦 · 汤若望",
+      "imageKind": "后世版画",
+      "caption": "基歇尔《中国图说》，1667年；画面晚于人物活动和当前时间轴终点，不是1607年的现场。",
+      "summary": "译著与历法工作体现合作，也受士人网络和政权更替影响。科学合作、受洗、礼仪争议与政治归属需要分别考察。",
+      "facts": [
+        {
+          "year": 1607,
+          "text": "《几何原本》前六卷刊行，徐光启与利玛窦合作翻译。",
+          "eventId": "world-084"
+        },
+        {
+          "year": 1616,
+          "text": "南京教案发生；不要与1664年的历狱混淆。",
+          "eventId": "world-085"
+        },
+        {
+          "year": 1644,
+          "text": "明清易代，汤若望呈进历法；新历于1645年施行。",
+          "eventId": "world-086"
+        }
+      ],
+      "historySource": "https://www.loc.gov/item/2010585650/",
+      "image": "assets/history/11.webp",
+      "imageSource": "https://commons.wikimedia.org/wiki/File:Matteo_Ricci_and_Xu_Guangqi_from_Athanasius_Kircher_(3756759)_(cropped).jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Matteo_Ricci_and_Xu_Guangqi_from_Athanasius_Kircher_%283756759%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "credit": "Athanasius Kircher",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "sha256": "27bf9778dbc33e8cb747876c9768bca7fb06659aabdee1c1c45e938f8e963b1f",
+      "transform": "缩小并转换为WebP，未裁切",
+      "fileTitle": "File:Matteo Ricci and Xu Guangqi from Athanasius Kircher (3756759) (cropped).jpg"
+    }
+  ]
+}

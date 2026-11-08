@@ -1,0 +1,174 @@
+[
+  {
+    "id": "portrait-socrates",
+    "title": "苏格拉底雕像头像",
+    "caption": "古代雕像的现代照片；约公元一世纪的罗马肖像摹本，不能作为苏格拉底在世容貌的直接记录。",
+    "imageKind": "古代肖像摹本的现代照片",
+    "personIds": [
+      "socrates"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/portrait-socrates.webp",
+    "credit": "摄影：Eric Gaba（Wikimedia Commons 用户 Sting）；古代雕像：Lysippos 原型的罗马摹本（归属存疑）",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Socrates_Louvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "1st century ADdate QS:P,+050-00-00T00:00:00Z/7",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "a75fd13747eb12c657dd7cbd51364b00b2d9b3fa9cf44c8a6fc38274d36e3484",
+    "width": 825,
+    "height": 1100,
+    "rightsNote": "古代雕像的公共领域状态不覆盖现代摄影；本地转换照片继续按 CC BY-SA 2.5 提供。"
+  },
+  {
+    "id": "portrait-aristotle",
+    "title": "亚里士多德雕像头像",
+    "caption": "阿尔滕普斯宫藏罗马时期肖像摹本，依约公元前330年的希腊原型；衣饰有后世增补。原型、摹本与现代拍摄是不同时间层次。",
+    "imageKind": "古代肖像摹本的现代照片",
+    "personIds": [
+      "aristotle"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/portrait-aristotle.webp",
+    "credit": "摄影：Jastrow（2006，摄影者释入公共领域）；雕像：依 Lysippos 原型的罗马摹本",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "after 330 BC",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "3916b3a754fa49b2e9a5205645be622935bf9eb4f020d9d581508154541c7c06",
+    "width": 822,
+    "height": 1100
+  },
+  {
+    "id": "portrait-descartes",
+    "title": "笛卡尔肖像",
+    "caption": "卢浮宫藏笛卡尔肖像；馆方归为依弗兰斯·哈尔斯之作的摹作。不是笛卡尔本人的照片，也不在此断定为哈尔斯亲笔写生。",
+    "imageKind": "历史油画复制图",
+    "personIds": [
+      "descartes"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/portrait-descartes.webp",
+    "credit": "Frans Hals",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Frans_Hals,_Portrait_of_Ren%C3%A9_Descartes.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Frans_Hals%2C_Portrait_of_Ren%C3%A9_Descartes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "1649",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "697b73b7ebb41665b073b709c0333b98882315b52a5c420243592394b9e17967",
+    "width": 810,
+    "height": 1100,
+    "catalogueUrl": "https://collections.louvre.fr/ark:/53355/cl010062106"
+  },
+  {
+    "id": "portrait-kant",
+    "title": "康德肖像",
+    "caption": "约1790年的康德绘画肖像复制图；作者归属有不确定性，用于辨认思想史人物；绘画呈现不等于未经处理的实际容貌记录。",
+    "imageKind": "历史绘画复制图",
+    "personIds": [
+      "kant"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/portrait-kant.webp",
+    "credit": "unbekannt, möglicherweise Elisabeth von Stägemann (Schule von Anton Graff)",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Immanuel_Kant_(painted_portrait).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Immanuel_Kant_%28painted_portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "circa 1790date QS:P571,+1790-00-00T00:00:00Z/9,P1480,Q5727902",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "27d38724ebc29a3cc3fe3868a779ded2e22a9fe016b34d5d01b8c39998fb973a",
+    "width": 764,
+    "height": 1100
+  },
+  {
+    "id": "portrait-hegel",
+    "title": "黑格尔肖像",
+    "caption": "黑格尔的历史肖像复制图，具体制作年代未详；这是人物图像传统的材料，不作为其思想或具体事件的证据。",
+    "imageKind": "历史肖像复制图",
+    "personIds": [
+      "hegel"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/portrait-hegel.webp",
+    "credit": "作者未详（图源未署名）",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Georg_Wilhelm_Friedrich_Hegel00.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Georg_Wilhelm_Friedrich_Hegel00.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "Unknown date pre1831",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "61b96fc153660f41f900b9d6ad7aa3376ff5fa6ecc94c37b4721137b55740483",
+    "width": 476,
+    "height": 640
+  },
+  {
+    "id": "book-discourse",
+    "title": "《方法谈》1637年版题名页",
+    "caption": "《方法谈》1637年初版题名页复制图。此书与1641年的《第一哲学沉思集》是不同作品。",
+    "imageKind": "早期印本复制图",
+    "personIds": [
+      "descartes"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/book-discourse.webp",
+    "credit": "Ian Maire",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Descartes_Discours_de_la_Methode.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Descartes_Discours_de_la_Methode.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "1637",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "46d58563f674566ba2366f723d17c1d82ab20c2f7a69407674a9ec6b0a7913a9",
+    "width": 429,
+    "height": 584
+  },
+  {
+    "id": "book-organum",
+    "title": "培根1620年刊本卷首图",
+    "caption": "弗朗西斯·培根1620年刊本卷首复制图，题为 Instauratio magna（《大复兴》），与《新工具》的出版相关。海船与界柱是印本图像，不能作为实际航行的记录。",
+    "imageKind": "早期印本复制图",
+    "personIds": [
+      "bacon"
+    ],
+    "workIds": [
+      "work-novum-organum"
+    ],
+    "image": "assets/philosophy/book-organum.webp",
+    "credit": "Francis Bacon",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Novum_Organum.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Novum_Organum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "2012-02-10",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "46cd0137a756be7caf58598509c17d784e27bfeaab71d9c1fc5bcd94d6c80e0c",
+    "width": 762,
+    "height": 1100
+  },
+  {
+    "id": "book-kant",
+    "title": "《纯粹理性批判》1781年版题名页",
+    "caption": "康德《纯粹理性批判》1781年初版题名页；1787年第二版有重要改写，不能仅凭这张图替代版本比较。",
+    "imageKind": "历史印本复制图",
+    "personIds": [
+      "kant"
+    ],
+    "workIds": [],
+    "image": "assets/philosophy/book-kant.webp",
+    "credit": "作者未详，见原始文件页",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Kant-KdrV-1781.png",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Kant-KdrV-1781.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "sourceDate": "见源文件页",
+    "transform": "保持完整构图，缩小并转为 WebP",
+    "sha256": "cf23656284bad89acce2572c5f711f9060001700229497ab85cf447e27439c0a",
+    "width": 658,
+    "height": 1100
+  }
+]

@@ -1,0 +1,21 @@
+output/
+.DS_Store
+*.log
+.playwright-cli/
+.venv/
+.cache/
+__pycache__/
+*.pyc
+
+# 本地书籍与凭据不进入版本库
+文献/
+.env
+.env.*
+*.pem
+*.key
+
+# Temporary PDF and browser verification artifacts
+tmp/
+
+# 本机提供的界面参考图，不随网页发布
+参考/

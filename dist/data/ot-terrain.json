@@ -1,0 +1,19 @@
+{
+  "bounds": [
+    33.8,
+    30.7,
+    36.8,
+    33.6
+  ],
+  "tileZoom": 10,
+  "tileCount": 99,
+  "width": 2185,
+  "height": 2494,
+  "groundResolutionMetres": 129,
+  "image": "data/ot-terrain.webp",
+  "note": "现代高程晕渲，供辨认山地、河谷与海岸；不等于古代地貌复原。",
+  "sources": [
+    "https://registry.opendata.aws/terrain-tiles/",
+    "https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+  ]
+}
