@@ -319,4 +319,3 @@
 - [原始文件与权利记录](https://commons.wikimedia.org/wiki/File:Kant-KdrV-1781.png)
 - 处理：保持完整构图，缩小并转为 WebP
 - 校验：`cf23656284bad89acce2572c5f711f9060001700229497ab85cf447e27439c0a`
-

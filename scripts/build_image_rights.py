@@ -29,7 +29,7 @@ def main():
         if item.get('rightsNote'):
             lines.append('- 权利区分：' + item['rightsNote'])
         lines.append('')
-    (DATA / 'IMAGE-RIGHTS.md').write_text('\n'.join(lines) + '\n')
+    (DATA / 'IMAGE-RIGHTS.md').write_text('\n'.join(lines).rstrip() + '\n')
     print('35 幅唯一图像：' + str(dict(Counter(i['license'] for i in unique.values()))))
 
 
