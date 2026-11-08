@@ -36,6 +36,19 @@ def public_readme():
 
 结构图人物与主页使用同一详读窗口；作品和纪事可返回结构图原来的位置、倍率与检索状态。人物概览新增可折叠的同时期纪事入口，日期背景不自动表示人物亲历或思想影响。
 
+
+## 在 GitHub 找到项目
+
+GitHub 的搜索结果请选择 **Repositories（仓库）**。最准确的检索：
+
+- `yanguang user:LuciusCyrene`
+- `言光 user:LuciusCyrene`
+- `topic:church-history user:LuciusCyrene`
+
+也可以按主题尝试“圣经时序”“西方哲学史”“教会史”。宽泛关键词可能返回很多项目，匹配不保证排名。项目地址：[LuciusCyrene/yanguang](https://github.com/LuciusCyrene/yanguang)。
+
+Yanguang (言光, Scripture Through Time) is a Chinese interactive Bible atlas, church history timeline and western philosophy reader. Explore biblical places, historical events, philosophers and source-linked reading through draggable timelines, interactive maps and a scrollable overview.
+
 ## 本地启动
 
 需要 Python 3，无需 npm 安装或打包：
